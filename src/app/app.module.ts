@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { OneComponent } from './requirements copy/one/one';
+import { OneComponent } from './requirements/one/one';
 
 @NgModule({
   declarations: [
