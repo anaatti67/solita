@@ -1,0 +1,12 @@
+<table class="ui celled table">
+    <thead>
+      <tr><th>Nimi</th>
+      <th>Määrä</th>
+    </tr></thead>
+    <tbody>
+      <tr *ngFor="let x of nameArray">
+        <td data-label="name">{{x.name}}</td>
+        <td data-label="amount">{{x.amount}}</td>
+      </tr>
+    </tbody>
+  </table>

@@ -26,6 +26,10 @@ export class OneComponent {
 		//Sorting names in descending order from name array.
 		var sorted = this.nameArray.sort((a, b) => (a.amount < b.amount) ? 1 : -1)
 
-		console.log(sorted) sdkfksdf
+		console.log(sorted)
 	}
 }
+
+
+
+
