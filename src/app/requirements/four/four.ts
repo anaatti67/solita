@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import nameData from '../../names/names.json'
 
@@ -13,21 +13,22 @@ const { names } = nameData
 
 @Component({
 	selector: 'app-four',
-	templateUrl: './four.html'
+    templateUrl: './four.html',
+    styleUrls: ["./four.css"]
 })
 
 
-
 export class FourComponent {
+
     nameArray: Array<INames> = names
-    amountOfNames() {
-        let y = 0
-            for(let x of this.nameArray) {
-                y = x.amount + y
-            }
-        return y
+
+    constructor() { 
     }
-	constructor() {        
+
+    hasName(nameParam: any) {
+        console.log("miksi tämä tulee kaksi kertaa")
+        
+        return this.nameArray.some(elem => elem.name === nameParam)
     }
 }
 

@@ -1,12 +1,15 @@
 <table class="ui celled table">
     <thead>
-      <tr><th>Nimi</th>
-      <th>Määrä</th>
-    </tr></thead>
+      <tr>
+        <th>Name</th>
+        <th>Amount</th>
+      </tr>
+    </thead>
     <tbody>
+      <!--Loops trough the array containing the names and amounts-->
       <tr *ngFor="let x of nameArray">
-        <td data-label="name">{{x.name}}</td>
-        <td data-label="amount">{{x.amount}}</td>
+        <td>{{x.name}}</td>
+        <td>{{x.amount}}</td>
       </tr>
     </tbody>
   </table>

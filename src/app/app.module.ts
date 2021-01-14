@@ -7,7 +7,19 @@ import { OneComponent } from './requirements/one/one';
 import { TwoComponent } from './requirements/two/two';
 import { ThreeComponent } from './requirements/three/three';
 import { FourComponent } from './requirements/four/four';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HeaderComponent } from './header/header';
+import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './home/home';
 
+
+const appRoutes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'one', component: OneComponent },
+  { path: 'two', component: TwoComponent },
+  { path: 'three', component: ThreeComponent },
+  { path: 'four', component: FourComponent }
+]
 
 @NgModule({
   declarations: [
@@ -15,12 +27,15 @@ import { FourComponent } from './requirements/four/four';
     OneComponent,
     TwoComponent,
     ThreeComponent,
-    FourComponent
+    FourComponent,
+    HeaderComponent
     
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]

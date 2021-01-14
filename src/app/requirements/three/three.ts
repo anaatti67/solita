@@ -13,19 +13,23 @@ const { names } = nameData
 
 @Component({
 	selector: 'app-three',
-	templateUrl: './three.html'
+    templateUrl: './three.html',
+    styleUrls: ["./three.css"]
 })
 
 
 
 export class ThreeComponent {
     nameArray: Array<INames> = names
+    
     amountOfNames() {
         let y = 0
             for(let x of this.nameArray) {
                 y = x.amount + y
             }
+            console.log("jehna")
         return y
+        
     }
 	constructor() {        
     }

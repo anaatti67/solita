@@ -1,5 +1,25 @@
-<h3>Mitä nimeä haluat etsiä?</h3>
+<h3>What is the name you want to look up?</h3>
+<h4>And remember to use capital letter</h4>
 
 <input 
     type="text"
-    #nameParam>
+    #nameParam
+    placeholder="for example Ville"
+    />
+    
+
+<button
+    class="btn btn-primary"
+    (click)="nameParam"
+    >Search
+</button>
+
+<ng-container *ngIf="hasName(nameParam.value); else elseBlock">
+    <div *ngFor="let x of nameArray">
+        <td *ngIf="x.name === nameParam.value">{{"There are " + x.amount + " " + "people named " + x.name + " working at Solita!" }}</td>
+   </div>
+   
+</ng-container>
+
+<ng-template #elseBlock>Could not find the name</ng-template>
+

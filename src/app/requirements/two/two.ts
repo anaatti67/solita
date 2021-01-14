@@ -11,7 +11,8 @@ const { names } = nameData
 
 @Component({
 	selector: 'app-two',
-	templateUrl: './two.html'
+    templateUrl: './two.html',
+    styleUrls: ["./two.css"]
 })
 
 export class TwoComponent {
