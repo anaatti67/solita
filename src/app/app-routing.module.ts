@@ -7,7 +7,7 @@ import { ThreeComponent } from './requirements/three/three';
 import { TwoComponent } from './requirements/two/two';
 
 const appRoutes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
   { path: 'one', component: OneComponent },
   { path: 'two', component: TwoComponent },
   { path: 'three', component: ThreeComponent },
@@ -15,7 +15,7 @@ const appRoutes: Routes = [
 ]
 
 @NgModule({
-  imports: [RouterModule.forRoot(appRoutes), AppRoutingModule],
+  imports: [RouterModule.forRoot(appRoutes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
