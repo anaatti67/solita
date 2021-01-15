@@ -24,5 +24,8 @@ export class TwoComponent {
         var sortedByName = this.nameArray.sort((a, b) => (a.name < b.name) ? -1 : 1)
         
         console.log(sortedByName)
-	}
+    }
+    jees() {
+        console.log("howdy")
+    }
 }

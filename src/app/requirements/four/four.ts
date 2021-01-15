@@ -23,6 +23,7 @@ export class FourComponent {
     nameArray: Array<INames> = names
 
     constructor() { 
+        
     }
 
     hasName(nameParam: any) {
