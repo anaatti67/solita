@@ -27,7 +27,6 @@ export class ThreeComponent {
             for(let x of this.nameArray) {
                 y = x.amount + y
             }
-            console.log("jehna")
         return y
         
     }

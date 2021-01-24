@@ -1,18 +1,15 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component } from '@angular/core';   
 import nameData from '../../names/names.json'
-
-
-
+    
 interface INames {
-		name: string,
-		amount: number
+        name: string,
+        amount: number
 }
 
 const { names } = nameData
 
 @Component({
-	selector: 'app-four',
+    selector: 'app-four',
     templateUrl: './four.html',
     styleUrls: ["./four.css"]
 })
@@ -22,17 +19,10 @@ export class FourComponent {
 
     nameArray: Array<INames> = names
 
-    constructor() { 
-        
-    }
+
+    constructor() { }
 
     hasName(nameParam: any) {
-        console.log("miksi tämä tulee kaksi kertaa")
-        
         return this.nameArray.some(elem => elem.name === nameParam)
     }
 }
-
-
-
-

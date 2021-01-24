@@ -1,3 +1,10 @@
 h1 {
     margin-top: 10px;
 }
+.home {
+    text-align: center;
+}
+
+li {
+    list-style: none;
+}
